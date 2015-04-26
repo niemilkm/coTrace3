@@ -22,3 +22,10 @@ Tags.attachSchema(new SimpleSchema({
     max: 50
   }
 }));
+
+// Meteor.startup( function() {
+//   Tags.insert({
+//     name: "FT-Batch",
+//     company: "companyId1"
+//   });
+// });

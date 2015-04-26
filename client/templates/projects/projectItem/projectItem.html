@@ -1,0 +1,23 @@
+<template name="projectItem">
+  <div class="row">
+    {{#if Template.subscriptionsReady}}
+      {{#each projects}}
+      <div class="col s12 m6 l4">
+        <div class="card">
+          <div class="card-panel light-blue darken-2 white-text">
+            <span class="">{{name}}</span>
+          </div>
+          <div class="card-content">
+            <p>0 Testimonials<br>
+              0 Success Stories</p>
+          </div>
+          <div class="card-panel light-blue darken-2 white-text">
+            <span>Pharmaceutical</span>
+            <span class="right">Amylin</span>
+          </div>
+        </div>
+      </div>
+      {{/each}}
+    {{/if}}
+  </div>
+</template>

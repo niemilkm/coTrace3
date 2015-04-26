@@ -27,15 +27,29 @@ Projects.before.insert(function (userId, doc) {
 Projects.attachSchema(new SimpleSchema({
   name: {
     type: String,
+    label: "Project Name",
     max: 200
   },
   client: {
     type: String,
-    max: 50
+    max: 50,
+    // autoform: {
+    //   options: function() {
+    //     var clients = Clients.find().fetch();
+    //     console.log(clients);
+    //     var array = [];
+    //     _.each(clients, function(data) {
+    //       array.push({label: data.name, value: data._id});
+    //     });
+    //     console.log(array);
+    //     return array;
+    //   }
+    // }
   },
   category: {
     type: String,
-    max: 50
+    max: 50,
+    label: ""
   },
   tags: {
     type: String,
@@ -44,5 +58,13 @@ Projects.attachSchema(new SimpleSchema({
   company: {
     type: String,
     max: 50
+  },
+  dateStart: {
+    type: Date,
+    label: "Start Date"
+  },
+  dateEnd: {
+    type: Date,
+    label: "End Date"
   }
 }));

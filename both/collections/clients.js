@@ -8,6 +8,17 @@ Clients.helpers({
 
 });
 
+// Meteor.startup( function() {
+//   Clients.insert({
+//     name: "Teva",
+//     company: "companyId3"
+//   });
+//   Clients.insert({
+//     name: "P&G",
+//     company: "companyId2"
+//   });
+// });
+
 Clients.before.insert(function (userId, doc) {
   doc.createdAt = moment().toDate();
 });

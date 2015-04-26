@@ -1,0 +1,43 @@
+<template name="projectsNew">
+  <!-- <div class="col s12 m9 l8 offset-m2 offset-l2"> -->
+  <div class="row valign-wrapper">
+    <div class="col l1"></div>
+    <div class="col l6">
+      <h1>New Project</h1>
+    </div>
+    <div class="col l3"></div>
+    <div class="col l2">
+      <a class="btn-floating btn-large waves-effect waves-light red lighten-2 right-align" href="{{pathFor 'dashboard'}}"><i class="mdi-navigation-arrow-back"></i></a>
+    </div>
+  </div>
+    <div class="card-panel">
+      {{#if Template.subscriptionsReady}}
+        <!-- {{> quickForm collection="Projects" id="projects-new-form" type="insert"}} -->
+        {{#autoForm collection="Projects" id="projects-new-form" type="insert"}}
+          <div class="row">
+            <div class="col l8 offset-l2">
+              {{> afQuickField name='name'}}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col l4 offset-l2">
+              {{> afQuickField name='client' label-style="color: teal" options=clientOptions firstOption=''}}
+            </div>
+            <div class="col l4">
+              {{> afQuickField name='category' options=categoryOptions firstOption=''}}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col l4 offset-l2">
+              <label class="teal-text lighten-2">Start Date</label>
+              <input type="date" class="datepicker" name="startDate">
+            </div>
+            <div class="col l4">
+              <label>End Date</label>
+              <input type="date" class="datepicker" name="endDate">
+            </div>
+          </div>
+        {{/autoForm}}
+      {{/if}}
+    </div>
+</template>

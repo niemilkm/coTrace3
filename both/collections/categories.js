@@ -22,3 +22,14 @@ Categories.attachSchema(new SimpleSchema({
     max: 50
   }
 }));
+
+// Meteor.startup( function() {
+//   Categories.insert({
+//     name: "Pharmaceutical",
+//     company: "companyId1"
+//   });
+//   Categories.insert({
+//     name: "Consumer Goods",
+//     company: "companyId1"
+//   });
+// });

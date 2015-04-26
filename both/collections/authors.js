@@ -13,7 +13,11 @@ Authors.before.insert(function (userId, doc) {
 });
 
 Authors.attachSchema(new SimpleSchema({
-  name: {
+  firstName: {
+    type: String,
+    max: 200
+  },
+  lastName: {
     type: String,
     max: 200
   },
@@ -31,10 +35,32 @@ Authors.attachSchema(new SimpleSchema({
   },
   email: {
     type: String,
+    regEx: SimpleSchema.RegEx.Email,
     max: 200
-  }
+  },
   company: {
     type: String,
     max: 50
   }
 }));
+
+// Meteor.startup( function() {
+//   Authors.insert({
+//     firstName: "Tom",
+//     lastName: "Smith",
+//     authorCompany: "Amylin",
+//     title: "Lead Engineer",
+//     phone: "555-555-0001",
+//     email: "tom.smith@test.test",
+//     company: "companyId1"
+//   });
+//   Authors.insert({
+//     firstName: "John",
+//     lastName: "Thomas",
+//     authorCompany: "P&G",
+//     title: "Process Engineer",
+//     phone: "555-555-0002",
+//     email: "john.thomas@test.test",
+//     company: "companyId2"
+//   });
+//});

@@ -14,3 +14,12 @@ Companies.attachSchema(new SimpleSchema({
     max: 200
   }
 }));
+
+// Meteor.startup( function() {
+//   Companies.insert({
+//     name: "E-Tech"
+//   });
+//   Companies.insert({
+//     name: "NKU Inkubator"
+//   });
+// });
